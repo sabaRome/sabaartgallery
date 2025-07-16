@@ -1,0 +1,246 @@
+html {
+    scroll-behavior: smooth;
+}
+[x-cloak] {
+    display: none;
+}
+
+/* Light Mode Scrollbar (Default) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #57534e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a8a29e; /* Light stone track for light mode */
+}
+
+
+/* Basic Layout */
+.body-layout {
+  background-color: #fafaf9;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  width: 100%;
+  max-width: 1200px; /* or 1024px, 90rem, etc. */
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* Header */
+.header {
+  background-color: #fafaf9;
+  padding: 1rem 0;
+}
+
+.header-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-link {
+  position: relative;
+  display: flex;
+  height: 4rem;
+  align-self: self-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-transform: capitalize;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: oklch(37.4% 0.01 67.558);
+}
+/* .logo-link :hover {
+  transform: scale(1.1);
+} */
+/* Change the color of links on hover */
+a:hover {
+  /* color: oklch(64.6% 0.222 41.116); */
+    font-weight: 400;
+    transform: scale(1.1);
+}
+.logo-title {
+  font-size: 3.75rem; /* text-6xl = 60px */
+  font-weight: 900 !important;
+}
+
+.logo-subtitle {
+  position: absolute;
+  left: 0;
+  top: 3.10rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 5rem 0 0 0;
+}
+
+/* Footer */
+.footer {
+  color: #6b7280;
+  text-align: center;
+  font-size: 14px;
+  padding: 8rem 0 0 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Text */
+
+.arizonia-regular {
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.racing-sans-one-regular {
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.font-bold {
+    font-weight: bold !important;
+}
+.bio-byline {
+  font-style: italic;
+  color: #555;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+
+/* Headings */
+
+h1 {
+    font-size: 3rem !important; /* 2rem = 2 × 16px = 32px */
+    font-weight: 700 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+h2 {
+    font-size: 1.75rem !important;  /* 1.75rem = 28px,  text-3xl = 1.875rem (30px) */
+    font-weight: 600 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+h3 {
+    font-size: 1.5rem !important; /* text-2xl = 1.5rem (24px) */
+    font-weight: 600 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+h4 {
+    font-size: 1.25rem !important;  /* text-xl */
+    font-weight: 600 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+h5 {
+    font-size: 1rem !important;  /* text-base */
+    font-weight: 600 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+h6 {
+    font-size: 0.875rem !important;  /* text-xs */
+    font-weight: 600 !important;
+    margin: inherit !important;
+    text-align: inherit !important;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  /* background-color: #fafafa;
+  overflow: hidden; */
+  height: 4rem;
+  align-self: self-start;
+  margin-top: 0.5rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #131313;
+  text-align: center;
+  padding: 14px 16px;
+  line-height: 3;
+  font-weight: 100;
+  text-decoration: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  /* background-color: #ddd; */
+  /* color: oklch(64.6% 0.222 41.116); */
+  font-weight: 400;
+  transform: scale(1.05);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  /* color: oklch(39.6% 0.141 25.723); */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}

@@ -1,0 +1,8 @@
+title: My Art Gallery
+description: A personal collection of artworks by Saba.
+baseurl: ""       
+url: "https://sabaartgallery.com"   
+theme: minima
+collections:
+  artworks:
+    output: true
