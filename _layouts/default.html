@@ -31,12 +31,13 @@
 
 
       <div class="topnav space-x-2 md:space-x-5 text-slate-400" id="myTopnav">
-        <a href="/" >Home</a>
+         <a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a>
         <a href="#">Gallery</a>
         <a href="#">Contact</a>
-        <a href="#">About</a>
-        <a href="#">Artistic Concept</a>
-        <a href="#">Method & Materials</a>
+        <a href="#">Commission</a>
+        <a href="/about/" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
+        <a href="/artistic-concept/" class="{% if page.url == '/artistic-concept/' %}active{% endif %}">Artistic Concept</a>
+        <a href="/method-and-materials/" class="{% if page.url == '/method-and-materials/' %}active{% endif %}">Method & Materials</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
