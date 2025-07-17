@@ -18,25 +18,25 @@
   <link rel="stylesheet" href="/assets/css/customStyles.css">
 
 </head>
-<body class="body-layout w-full px-4 md:w-9/12 md:mx-auto">
+<body class="relative body-layout">
 
   <!-- Header -->
-  <header>
-    <div class="flex justify-between items-center">
+  <header class="absolute z-10 inset-0 w-full md:w-11/12 sm:mx-auto mt-4">
+    <div class="px-4 flex justify-between items-center">
 
-      <a href="/" class="logo-link arizonia-regular">
-        <span class="logo-title arizonia-regular">SaBa</span>
-        <span class="logo-subtitle arizonia-regular">Art Gallery</span>
-      </a>
+              <a href="/" class="logo-link arizonia-regular text-slate-400 transition duration-150 ease-in-out hover:font-bold hover:text-stone-800 hover:scale-120">
+                <span class="logo-title arizonia-regular">SaBa</span>
+                <span class="logo-subtitle arizonia-regular">Art Gallery</span>
+              </a>
 
-      <div class="topnav" id="myTopnav">
-        <a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+
+      <div class="topnav space-x-2 md:space-x-5 text-slate-400" id="myTopnav">
+        <a href="/" >Home</a>
         <a href="#">Gallery</a>
         <a href="#">Contact</a>
-        <a href="#">Commission</a>
-        <a href="/about/" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
-        <a href="/artistic-concept/" class="{% if page.url == '/artistic-concept/' %}active{% endif %}">Artistic Concept</a>
-        <a href="/method-and-materials/" class="{% if page.url == '/method-and-materials/' %}active{% endif %}">Method & Materials</a>
+        <a href="#">About</a>
+        <a href="#">Artistic Concept</a>
+        <a href="#">Method & Materials</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -47,12 +47,12 @@
   </header>
 
      <!-- Main Content -->
-    <main class="main-content">
+    <main class="flex-1 mt-20 w-full md:w-9/12 sm:mx-auto px-4">
       {{ content }}
     </main>
 
     <!-- Footer -->
-    <footer class="space-y-3 mt-32 text-slate-400">
+    <footer class="space-y-3 mt-32 text-slate-400 w-full md:w-11/12 sm:mx-auto">
         <!-- Social links -->
         <div class="flex items-center justify-center space-x-4">
 
@@ -106,16 +106,26 @@
             <p>© 2025 SaBa. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        // Toggle mobile nav
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-  </script>
+        // Close panel on outside click
+        document.addEventListener('click', function(event) {
+            var nav = document.getElementById("myTopnav");
+            var isClickInside = nav.contains(event.target);
+
+            if (!isClickInside && nav.className.includes("responsive")) {
+            nav.className = "topnav"; // Remove 'responsive'
+            }
+        });
+    </script>
 </body>
 </html>
