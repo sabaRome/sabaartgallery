@@ -143,21 +143,7 @@ h6 {
     text-align: inherit !important;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  overflow: hidden;
-  /* background-color: #333; */
-}
 
-/* .topnav a {
-  float: left;
-  display: block;
-  color: #757575;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-} */
 .topnav a {
   float: left;
   display: block;
@@ -216,6 +202,7 @@ h6 {
     display: block;
     text-align: left;
     color: rgb(53, 53, 53);
+    padding: 0 10px;
   }
   .topnav.responsive a:hover {
      color: rgb(0, 0, 0);
