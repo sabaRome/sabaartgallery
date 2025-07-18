@@ -13,7 +13,13 @@ title: Contact
       Let your message find its way to my canvas.
     </p>
 
-    <form action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" method="POST" class="space-y-8">
+    <form 
+        action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" 
+        method="POST" 
+        class="space-y-8"
+        id="contactForm" 
+        onsubmit="return validateForm()"
+    >
 
       <div>
         <label for="name" class="block mb-2 text-sm font-medium text-stone-900">Your Name</label>
@@ -25,6 +31,7 @@ title: Contact
           placeholder="Your name..."
           required
         >
+        <p id="nameError" class="hidden mt-1 text-sm text-red-500">Please enter your name.</p>
       </div>
 
       <div>
@@ -37,6 +44,7 @@ title: Contact
           placeholder="name@example.com"
           required
         >
+        <p id="emailError" class="hidden mt-1 text-sm text-red-500">Please enter a valid email address.</p>
       </div>
 
       <div>
@@ -49,6 +57,7 @@ title: Contact
           placeholder="Let us know how we can help you"
           required
         >
+        <p id="subjectError" class="hidden mt-1 text-sm text-red-500">Please enter a subject.</p>
       </div>
 
       <div class="sm:col-span-2">
@@ -61,6 +70,7 @@ title: Contact
           placeholder="Leave a comment..."
           required
         ></textarea>
+        <p id="messageError" class="hidden mt-1 text-sm text-red-500">Please enter a message.</p>
       </div>
 
       <!-- Formsubmit hidden fields -->
@@ -88,3 +98,30 @@ title: Contact
     saba@sabaartgallery.com
   </a>
 </p>
+<!-- Validation Script -->
+<script>
+  function validateForm() {
+    let isValid = true;
+
+    const fields = [
+      { id: 'name', error: 'nameError', message: 'Please enter your name.' },
+      { id: 'email', error: 'emailError', message: 'Please enter a valid email address.' },
+      { id: 'subject', error: 'subjectError', message: 'Please enter a subject.' },
+      { id: 'message', error: 'messageError', message: 'Please enter a message.' }
+    ];
+
+    fields.forEach(({ id, error }) => {
+      const input = document.getElementById(id);
+      const errorMsg = document.getElementById(error);
+
+      if (!input.value.trim() || (input.type === 'email' && !input.validity.valid)) {
+        errorMsg.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errorMsg.classList.add('hidden');
+      }
+    });
+
+    return isValid;
+  }
+</script>
