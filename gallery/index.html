@@ -3,120 +3,163 @@ layout: default
 title: Gallery
 ---
 
+
+<!-- Tabs -->
 <div
-  x-data="{
-    selectedId: null,
-    artworks: {{ site.data.artworks | jsonify }},
-    init() {
-      this.$nextTick(() => this.select(this.$id('tab', 1)))
-    },
-    select(id) {
-      this.selectedId = id
-    },
-    isSelected(id) {
-      return this.selectedId === id
-    },
-    whichChild(el, parent) {
-      return Array.from(parent.children).indexOf(el) + 1
-    },
-    getCategoryFromTab(id) {
-      if (id.includes('1')) return 'all'
-      if (id.includes('2')) return 'original'
-      if (id.includes('3')) return 'collectors'
-    }
-  }"
-  x-id="['tab']"
-  class="w-full mx-auto mb-10"
-  x-cloak
+    x-data="{
+        selectedId: null,
+        artworks: {{ site.data.artworks | jsonify }},
+        init() {
+            // Set the first tab active on load
+            this.$nextTick(() => this.select(this.$id('tab', 1)))
+        },
+        select(id) {
+            this.selectedId = id
+        },
+        isSelected(id) {
+            return this.selectedId === id
+        },
+        whichChild(el, parent) {
+            return Array.from(parent.children).indexOf(el) + 1
+        }
+    }"
+    x-id="['tab']"
+    class="w-full mx-auto mb-10"
+    x-cloak
 >
+    <!-- Tab List -->
+    <ul
+        x-ref="tablist"
+        @keydown.right.prevent.stop="$focus.wrap().next()"
+        @keydown.home.prevent.stop="$focus.first()"
+        @keydown.page-up.prevent.stop="$focus.first()"
+        @keydown.left.prevent.stop="$focus.wrap().prev()"
+        @keydown.end.prevent.stop="$focus.last()"
+        @keydown.page-down.prevent.stop="$focus.last()"
+        role="tablist"
+        class="flex items-stretch justify-center -mb-px overflow-x-auto"
+    >
+        <!-- All -->
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >All Artworks</button>
+        </li>
 
-  <!-- Tabs -->
-  <ul
-    x-ref="tablist"
-    @keydown.right.prevent.stop="$focus.wrap().next()"
-    @keydown.left.prevent.stop="$focus.wrap().prev()"
-    role="tablist"
-    class="flex items-stretch justify-center -mb-px overflow-x-auto"
-  >
-    <li>
-      <button
-        :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
-        @click="select($el.id)"
-        @mousedown.prevent
-        @focus="select($el.id)"
-        type="button"
-        :tabindex="isSelected($el.id) ? 0 : -1"
-        :aria-selected="isSelected($el.id)"
-        :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800 text-slate-400 border-transparent'"
-        class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
-        role="tab"
-      >All Artworks</button>
-    </li>
-    <li>
-      <button
-        :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
-        @click="select($el.id)"
-        @mousedown.prevent
-        @focus="select($el.id)"
-        type="button"
-        :tabindex="isSelected($el.id) ? 0 : -1"
-        :aria-selected="isSelected($el.id)"
-        :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800 text-slate-400 border-transparent'"
-        class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
-        role="tab"
-      >Original Artworks</button>
-    </li>
-    <li>
-      <button
-        :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
-        @click="select($el.id)"
-        @mousedown.prevent
-        @focus="select($el.id)"
-        type="button"
-        :tabindex="isSelected($el.id) ? 0 : -1"
-        :aria-selected="isSelected($el.id)"
-        :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800 text-slate-400 border-transparent'"
-        class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
-        role="tab"
-      >Collectors Edition</button>
-    </li>
-  </ul>
+        <!-- Original -->
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >Original Artworks</button>
+        </li>
 
-  <!-- Tab Panels -->
-  <div role="tabpanels" class="border-t border-stone-300">
+        <!-- Collectors -->
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >Collectors Edition</button>
+        </li>
+    </ul>
 
-    <!-- Tab Panel Template -->
-    <template x-for="i in 3" :key="i">
-      <section
-        x-show="isSelected($id('tab', i))"
-        :aria-labelledby="$id('tab', i)"
-        role="tabpanel"
-        class="p-6"
-      >
-        <h2 class="mb-4 text-xl font-bold" x-text="i === 1 ? 'All Artworks' : (i === 2 ? 'Original Artworks' : 'Collectors Edition')"></h2>
+    <!-- Panels -->
+    <div role="tabpanels" class="border-t border-stone-300">
 
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          <template x-for="art in artworks" :key="art.permalink">
-            <template
-              x-if="
-                (i === 1) ||
-                (i === 2 && art.category === 'original') ||
-                (i === 3 && art.category === 'collectors')
-              "
-            >
-              <a :href="art.permalink" class="block overflow-hidden transition duration-300 border rounded shadow group hover:shadow-lg">
-                <img :src="art.image" :alt="art.title" class="object-cover w-full h-60 group-hover:opacity-90">
-                <div class="p-4">
-                  <h2 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600" x-text="art.title"></h2>
-                  <p class="mt-1 text-sm text-gray-600" x-text="art.size"></p>
-                  <p class="text-sm font-medium text-gray-800" x-text="art.price"></p>
-                </div>
-              </a>
-            </template>
-          </template>
-        </div>
-      </section>
-    </template>
+        <!-- All Artworks -->
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="mb-6 text-xl font-bold">All Artworks</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                        <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                            <p class="text-sm text-gray-600" x-text="art.size"></p>
+                            <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                        </div>
+                    </a>
+                </template>
+            </div>
+        </section>
 
-  </div>
+        <!-- Original Artworks -->
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="mb-6 text-xl font-bold">Original Artworks</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <template x-if="art.category === 'original'">
+                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                                <p class="text-sm text-gray-600" x-text="art.size"></p>
+                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                            </div>
+                        </a>
+                    </template>
+                </template>
+            </div>
+        </section>
+
+        <!-- Collectors Edition -->
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="mb-6 text-xl font-bold">Collectors Edition</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <template x-if="art.category === 'collectors'">
+                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                                <p class="text-sm text-gray-600" x-text="art.size"></p>
+                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                            </div>
+                        </a>
+                    </template>
+                </template>
+            </div>
+        </section>
+
+    </div>
 </div>
