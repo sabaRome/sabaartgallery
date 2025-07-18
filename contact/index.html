@@ -14,6 +14,8 @@ title: Contact
     </p>
 
     <form 
+        action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" 
+        method="POST" 
         class="space-y-8"
         id="contactForm" 
     >
@@ -95,32 +97,38 @@ title: Contact
     saba@sabaartgallery.com
   </a>
 </p>
-<!-- Validation Script -->
+
+
+<!-- JavaScript for validation -->
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    let isValid = true;
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
 
-    const fields = [
-      { id: 'name', errorId: 'nameError' },
-      { id: 'email', errorId: 'emailError' },
-      { id: 'subject', errorId: 'subjectError' },
-      { id: 'message', errorId: 'messageError' },
-    ];
+    form.addEventListener("submit", function (e) {
+      let isValid = true;
 
-    fields.forEach(({ id, errorId }) => {
-      const input = document.getElementById(id);
-      const error = document.getElementById(errorId);
+      const fields = [
+        { id: "name", errorId: "nameError" },
+        { id: "email", errorId: "emailError" },
+        { id: "subject", errorId: "subjectError" },
+        { id: "message", errorId: "messageError" },
+      ];
 
-      if (!input.value.trim() || (input.type === 'email' && !input.validity.valid)) {
-        error.classList.remove('hidden');
-        isValid = false;
-      } else {
-        error.classList.add('hidden');
+      fields.forEach(({ id, errorId }) => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(errorId);
+
+        if (!input.value.trim() || (input.type === "email" && !input.validity.valid)) {
+          error.classList.remove("hidden");
+          isValid = false;
+        } else {
+          error.classList.add("hidden");
+        }
+      });
+
+      if (!isValid) {
+        e.preventDefault(); // stop form if there are errors
       }
     });
-
-    if (!isValid) {
-      e.preventDefault(); // 🔴 Stops the form from submitting
-    }
   });
 </script>
