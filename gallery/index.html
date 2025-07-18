@@ -8,7 +8,7 @@ title: Gallery
 <div
     x-data="{
         selectedId: null,
-        artworks: {{ site.data.artworks | jsonify }},
+        artworks: {{ site.data.artworks | jsonify }}
         init() {
             this.$nextTick(() => this.select(this.$id('tab', 1)))
         },
