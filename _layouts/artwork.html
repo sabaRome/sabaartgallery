@@ -48,12 +48,12 @@
   </header>
 
   <main class="flex-1 w-full px-4 mt-20 md:w-9/12 sm:mx-auto">
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full mb-6 rounded shadow">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-2/5 h-auto mx-auto mb-6 rounded shadow">
     <h1 class="mb-2 text-3xl font-bold">{{ page.title }}</h1>
     <p class="mb-1 text-sm text-gray-600">{{ page.size }}</p>
     <!-- <p class="mb-6 text-sm font-medium text-gray-900">{{ page.price }}</p> -->
 
-    <div class="prose prose-stone max-w-none">
+    <div class="space-y-1 prose prose-stone max-w-none">
       {{ content }}
     </div>
   </main>
