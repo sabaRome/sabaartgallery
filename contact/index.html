@@ -3,12 +3,7 @@ layout: default
 title: Contact
 ---
 
----
-layout: default
-title: Contact
----
-
-<section class="bg-white">
+<section class="bg-neutral-50">
   <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16">
     <h2 class="text-4xl font-extrabold tracking-tight text-center text-stone-900">
       Connect with the Artist
@@ -18,7 +13,7 @@ title: Contact
       Let your message find its way to my canvas.
     </p>
 
-    <form action="https://formsubmit.co/saba@sabaartgallery.com" method="POST" class="space-y-8">
+    <form action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" method="POST" class="space-y-8">
       <div>
         <label for="name" class="block mb-2 text-sm font-medium text-stone-900">Your Name</label>
         <input
@@ -70,8 +65,9 @@ title: Contact
       <!-- Formsubmit hidden fields -->
       <input type="hidden" name="_subject" value="New contact from SabaArtGallery">
       <input type="hidden" name="_next" value="https://sabaartgallery.com/thank-you/">
-      <input type="hidden" name="_captcha" value="true">
       <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
       <button
         type="submit"
@@ -82,4 +78,11 @@ title: Contact
     </form>
   </div>
 </section>
+<p class="my-4 text-sm text-center text-stone-600">
+  Prefer email?<br>
+  You can reach the artist directly at:<br>
+  <a href="mailto:saba@sabaartgallery.com" class="font-medium underline text-stone-800 hover:text-stone-900">
+    saba@sabaartgallery.com
+  </a>
+</p>
 
