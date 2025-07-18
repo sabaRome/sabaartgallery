@@ -21,7 +21,7 @@
 </head>
 <body class="body-layout">
 
-  <!-- Header -->
+      <!-- Header -->
   <header class="relative w-full md:w-11/12 sm:mx-auto">
     <div class="absolute inset-0 flex items-center justify-between px-4">
 
@@ -47,11 +47,16 @@
     </div>
   </header>
 
-     <!-- Main Content -->
-    <main class="flex-1 w-full px-4 mt-20 md:w-9/12 sm:mx-auto">
-      {{ content }}
-    </main>
+  <main class="flex-1 w-full px-4 mt-20 md:w-9/12 sm:mx-auto">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full mb-6 rounded shadow">
+    <h1 class="mb-2 text-3xl font-bold">{{ page.title }}</h1>
+    <p class="mb-1 text-sm text-gray-600">{{ page.size }}</p>
+    <!-- <p class="mb-6 text-sm font-medium text-gray-900">{{ page.price }}</p> -->
 
+    <div class="prose prose-stone max-w-none">
+      {{ content }}
+    </div>
+  </main>
     <!-- Footer -->
     <footer class="z-10 w-full mt-32 space-y-3 md:w-11/12 sm:mx-auto">
         <!-- Social links -->
