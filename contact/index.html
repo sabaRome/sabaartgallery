@@ -3,27 +3,48 @@ layout: default
 title: Contact
 ---
 
-<h2>Contact</h2>
+<section class="bg-white">
+  <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16">
+      <h2 class="text-4xl font-extrabold tracking-tight text-center text-stone-900">
+        Connect with the Artist
+      </h2>
+      <p class="mt-6 mb-8 font-light text-center text-stone-500 lg:mb-16 sm:text-lg">
+        I’d love to hear from you — whether it’s a thought, a question, or a whisper of inspiration.<br>
+        Let your message find its way to my canvas.
+      </p>
+      <form action="https://formsubmit.co/saba@sabaartgallery.com" method="POST" class="space-y-8">
+          <div>
+              <label for="name" class="block mb-2 text-sm font-medium text-stone-900">
+                    Your Name
+                </label>
+              <input type="name" id="name" class="bg-stone-50 border border-stone-300 text-stone-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="Your name..." required>
+          </div>
+          <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-stone-900">
+                    Your email
+                </label>
+              <input type="email" id="email" class="bg-stone-50 border border-stone-300 text-stone-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="name@flowbite.com" required>
+          </div>
+          <div>
+              <label for="subject" class="block mb-2 text-sm font-medium text-stone-900">
+                    Subject
+                </label>
+              <input type="text" id="subject" class="block w-full p-3 text-sm border rounded text-stone-900 border-stone-300 bg-stone-50 focus:ring-primary-500 focus:border-primary-500" placeholder="Let us know how we can help you" required>
+          </div>
+          <div class="sm:col-span-2">
+              <label for="message" class="block mb-2 text-sm font-medium text-stone-900 dark:text-stone-400">
+                    Your message
+                </label>
+              <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded border border-stone-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
+          </div>
 
-<h2>Contact Me</h2>
+          <!-- Optional: Customize subject, thank-you page, etc. -->
+          <input type="hidden" name="_subject" value="New contact from SabaArtGallery">
+          <input type="hidden" name="_next" value="https://sabaartgallery.com/thank-you/">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none">
 
-<form action="https://formsubmit.co/saba@sabaartgallery.com" method="POST">
-
-  <input type="text" name="_honey" style="display:none">
-
-  <label for="name">Name</label><br>
-  <input type="text" name="name" id="name" required><br><br>
-
-  <label for="email">Email</label><br>
-  <input type="email" name="email" id="email" required><br><br>
-
-  <label for="message">Message</label><br>
-  <textarea name="message" id="message" rows="5" required></textarea><br><br>
-
-  <!-- Optional: Customize subject, thank-you page, etc. -->
-  <input type="hidden" name="_subject" value="New contact from SabaArtGallery">
-  <input type="hidden" name="_next" value="https://sabaartgallery.com/thank-you/">
-  <input type="hidden" name="_captcha" value="true">
-
-  <button type="submit">Send Message</button>
-</form>
+          <button type="submit" class="px-5 py-3 text-sm font-medium text-center rounded cursor-pointer text-stone-100 bg-stone-800 sm:w-fit hover:bg-stone-100 hover:text-stone-800 hover:border hover:border-stone-300 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+      </form>
+  </div>
+</section>

@@ -33,6 +33,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: inherit;
   font-weight: inherit;
+  color: inherit;
 }
 
 
@@ -175,18 +176,18 @@ h6 {
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {
-        position: relative;
+        /* position: relative; */
         background-color: rgb(244, 244, 244);
-        /* box-shadow: 1px 2px #cdcdcd; */
         border: 1px solid #b5b5b5;
         width: fit-content;
         padding: 1rem;
-        margin: 0.75rem;
+        margin: 32rem 1rem 0 !important;
     }
   .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+
   }
   .topnav.responsive a {
     float: none;
@@ -200,3 +201,4 @@ h6 {
      transform: scale(1.10);
   }
 }
+
