@@ -8,8 +8,8 @@ title: Gallery
 <div
     x-data="{
         selectedId: null,
+        artworks: {{ site.data.artworks | jsonify }},
         init() {
-            // Set the first available tab on the page on page load.
             this.$nextTick(() => this.select(this.$id('tab', 1)))
         },
         select(id) {
@@ -94,7 +94,18 @@ title: Gallery
             class="p-8"
         >
             <h2 class="text-xl font-bold">All Artworks</h2>
-            ...
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                        <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                            <p class="text-sm text-gray-600" x-text="art.size"></p>
+                            <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                        </div>
+                    </a>
+                </template>
+            </div>
         </section>
 
         <section
@@ -104,7 +115,20 @@ title: Gallery
             class="p-8"
         >
             <h2 class="text-xl font-bold">Original Artworks</h2>
-                @include('sabaArtgallry.original-artworks')
+                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <template x-if="art.category === 'original'">
+                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                                <p class="text-sm text-gray-600" x-text="art.size"></p>
+                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                            </div>
+                        </a>
+                    </template>
+                </template>
+            </div>
         </section>
 
         <section
@@ -114,7 +138,20 @@ title: Gallery
             class="p-8"
         >
             <h2 class="text-xl font-bold">Collectors Edition</h2>
-            ...
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <template x-for="art in artworks" :key="art.permalink">
+                    <template x-if="art.category === 'collectors'">
+                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
+                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
+                                <p class="text-sm text-gray-600" x-text="art.size"></p>
+                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
+                            </div>
+                        </a>
+                    </template>
+                </template>
+            </div>
         </section>
     </div>
 </div>
