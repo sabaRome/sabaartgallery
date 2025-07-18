@@ -5,7 +5,7 @@ title: Gallery
 
 
 <!-- Tabs -->
-<div
+<!-- <div
     x-data="{
         selectedId: null,
         artworks: []
@@ -26,6 +26,14 @@ title: Gallery
     x-id="['tab']"
     class="w-full mx-auto mb-10"
     x-cloak
+> -->
+
+<div
+  x-data="tabGallery()"
+  x-init="init()"
+  x-id="['tab']"
+  class="w-full mx-auto mb-10"
+  x-cloak
 >
     <!-- Tab List -->
     <ul
@@ -156,3 +164,24 @@ title: Gallery
         </section>
     </div>
 </div>
+<script>
+  function tabGallery() {
+    return {
+      selectedId: null,
+      artworks: [],
+      init() {
+        this.artworks = {{ site.data.artworks | jsonify }};
+        this.$nextTick(() => this.select(this.$id('tab', 1)));
+      },
+      select(id) {
+        this.selectedId = id;
+      },
+      isSelected(id) {
+        return this.selectedId === id;
+      },
+      whichChild(el, parent) {
+        return Array.from(parent.children).indexOf(el) + 1;
+      }
+    };
+  }
+</script>
