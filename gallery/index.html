@@ -3,12 +3,15 @@ layout: default
 title: Gallery
 ---
 
-<h1 class="text-2xl font-bold mb-6">Artwork Gallery</h1>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<h1 class="mb-6 text-2xl font-bold">Artwork Gallery</h1>
+<div class="coming-soon">
+    <h2 class="text-center racing-sans-one-regular" style="padding-top: 3rem;">A New Work is Coming Soon...</h2>
+    <p class="text-center" style="font-size: 18px; line-height: 32px;">Something beautiful is on the horizon. The next piece of SaBa's Art Gallery is coming soon. Stay tuned for updates!</p>
+</div>
+<!-- <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
   {% for artwork in site.artworks %}
-    <a href="{{ artwork.url }}" class="block group border rounded overflow-hidden shadow hover:shadow-lg transition duration-300">
-      <img src="{{ artwork.image }}" alt="{{ artwork.title }}" class="w-full h-60 object-cover group-hover:opacity-90">
+    <a href="{{ artwork.url }}" class="block overflow-hidden transition duration-300 border rounded shadow group hover:shadow-lg">
+      <img src="{{ artwork.image }}" alt="{{ artwork.title }}" class="object-cover w-full h-60 group-hover:opacity-90">
       <div class="p-4">
         <h2 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600">
           {{ artwork.title }}
@@ -16,4 +19,4 @@ title: Gallery
       </div>
     </a>
   {% endfor %}
-</div>
+</div> -->
