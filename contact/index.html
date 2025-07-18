@@ -14,11 +14,8 @@ title: Contact
     </p>
 
     <form 
-        action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" 
-        method="POST" 
         class="space-y-8"
         id="contactForm" 
-        onsubmit="return validateForm()"
     >
 
       <div>
@@ -100,28 +97,30 @@ title: Contact
 </p>
 <!-- Validation Script -->
 <script>
-  function validateForm() {
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
     let isValid = true;
 
     const fields = [
-      { id: 'name', error: 'nameError', message: 'Please enter your name.' },
-      { id: 'email', error: 'emailError', message: 'Please enter a valid email address.' },
-      { id: 'subject', error: 'subjectError', message: 'Please enter a subject.' },
-      { id: 'message', error: 'messageError', message: 'Please enter a message.' }
+      { id: 'name', errorId: 'nameError' },
+      { id: 'email', errorId: 'emailError' },
+      { id: 'subject', errorId: 'subjectError' },
+      { id: 'message', errorId: 'messageError' },
     ];
 
-    fields.forEach(({ id, error }) => {
+    fields.forEach(({ id, errorId }) => {
       const input = document.getElementById(id);
-      const errorMsg = document.getElementById(error);
+      const error = document.getElementById(errorId);
 
       if (!input.value.trim() || (input.type === 'email' && !input.validity.valid)) {
-        errorMsg.classList.remove('hidden');
+        error.classList.remove('hidden');
         isValid = false;
       } else {
-        errorMsg.classList.add('hidden');
+        error.classList.add('hidden');
       }
     });
 
-    return isValid;
-  }
+    if (!isValid) {
+      e.preventDefault(); // 🔴 Stops the form from submitting
+    }
+  });
 </script>
