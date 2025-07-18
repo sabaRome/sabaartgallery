@@ -3,10 +3,118 @@ layout: default
 title: Gallery
 ---
 
-<h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
 
-<div x-data="{ count: 0 }">
-    <button x-on:click="count++">Increment</button>
- 
-    <span x-text="count"></span>
+<!-- Tabs -->
+<div
+    x-data="{
+        selectedId: null,
+        init() {
+            // Set the first available tab on the page on page load.
+            this.$nextTick(() => this.select(this.$id('tab', 1)))
+        },
+        select(id) {
+            this.selectedId = id
+        },
+        isSelected(id) {
+            return this.selectedId === id
+        },
+        whichChild(el, parent) {
+            return Array.from(parent.children).indexOf(el) + 1
+        }
+    }"
+    x-id="['tab']"
+    class="w-full mx-auto mb-10"
+    x-cloak
+>
+    <!-- Tab List -->
+    <ul
+        x-ref="tablist"
+        @keydown.right.prevent.stop="$focus.wrap().next()"
+        @keydown.home.prevent.stop="$focus.first()"
+        @keydown.page-up.prevent.stop="$focus.first()"
+        @keydown.left.prevent.stop="$focus.wrap().prev()"
+        @keydown.end.prevent.stop="$focus.last()"
+        @keydown.page-down.prevent.stop="$focus.last()"
+        role="tablist"
+        class="flex items-stretch justify-center -mb-px overflow-x-auto"
+    >
+        <!-- Tab -->
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >All Artworks</button>
+        </li>
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >Original Artworks</button>
+        </li>
+
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-stone-400 text-slate-800 font-bold' : 'cursor-pointer hover:text-slate-800  text-slate-400 border-transparent'"
+                class="inline-flex rounded-t-lg border-t border-l border-r px-5 py-2.5 transition duration-150 ease-in-out"
+                role="tab"
+            >Callectors Edition</button>
+        </li>
+    </ul>
+
+    <!-- Panels -->
+    <div role="tabpanels" class="border-t border-stone-300">
+        <!-- Panel -->
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="text-xl font-bold">All Artworks</h2>
+            ...
+        </section>
+
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="text-xl font-bold">Original Artworks</h2>
+                @include('sabaArtgallry.original-artworks')
+        </section>
+
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+            <h2 class="text-xl font-bold">Collectors Edition</h2>
+            ...
+        </section>
+    </div>
 </div>
