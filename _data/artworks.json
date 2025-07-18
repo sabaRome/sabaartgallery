@@ -1,58 +1,66 @@
 [
   {
-    "title": "SillWet S-01",
+    "title": "Sill Wet",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/sillWet/thumbnail/stilWet-S-01.jpg",
-    "size": "N/A",
+    "size": "19\" × 26\" (48.26 cm × 66.04 cm)",
     "price": "N/A",
-    "category": "original",
-    "permalink": "/artworks/sillwet-s-01/"
+    "category": "collectors",
+    "permalink": "/artworks/sill-wet/"
   },
   {
-    "title": "Sama Red 01 S-01",
+    "title": "Sama Red V.",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/sama/thumbnail/sama-Red-01-S-01.jpg",
-    "size": "N/A",
+    "size": "19\" × 26\" (48.26 cm × 66.04 cm)",
     "price": "N/A",
     "category": "original",
-    "permalink": "/artworks/sama-red-01/"
+    "permalink": "/artworks/sama-red-v/"
   },
   {
-    "title": "Sama Green 01 S-01",
+    "title": "Sama Green V.",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/sama/thumbnail/sama-green-01-S-01.jpg",
-    "size": "N/A",
+    "size": "19\" × 26\" (48.26 cm × 66.04 cm)",
     "price": "N/A",
     "category": "original",
-    "permalink": "/artworks/sama-green-01/"
+    "permalink": "/artworks/sama-green-v/"
   },
   {
-    "title": "Woman Life Freedom S-01",
+    "title": "Woman Life Freedom",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/WomanLifeFreedom/thumbnail/Woman-Life-Freedom-S-01.jpg",
-    "size": "N/A",
+    "size": "19\" × 26\" (48.26 cm × 66.04 cm)",
     "price": "N/A",
     "category": "original",
-    "permalink": "/artworks/woman-life-freedom-01/"
+    "permalink": "/artworks/woman-life-freedom/"
   },
   {
-    "title": "The Pure Flow S-01",
+    "title": "The Pure Flow",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/ThePureFlow/thumbnail/the-pure-flow-s-01.jpg",
-    "size": "N/A",
+    "size": "14\" × 19\" (35.56 cm × 48.26 cm)",
     "price": "N/A",
-    "category": "collectors",
-    "permalink": "/artworks/the-pure-flow-01/"
+    "category": "original",
+    "permalink": "/artworks/the-pure-flow/"
   },
   {
-    "title": "The Pearl Within S-02",
+    "title": "The Pearl Within",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/ThePearlWithin/thumbnail/ThePearlWithin-s-02.jpg",
-    "size": "N/A",
+    "size": "19\" × 26\" (48.26 cm × 66.04 cm)",
     "price": "N/A",
-    "category": "collectors",
-    "permalink": "/artworks/the-pearl-within-02/"
+    "category": "original",
+    "permalink": "/artworks/the-pearl-within/"
   },
   {
-    "title": "Beyond Words S-01",
+    "title": "Embracing Life's Beauty",
+    "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/EmbracingLifesBeauty/thumbnail/embracing-life-beauty-S-01.jpg",
+    "size": "23\" × 32\" (58.42 cm × 81.28 cm)",
+    "price": "N/A",
+    "category": "original",
+    "permalink": "/artworks/embracing-life-beauty/"
+  },
+  {
+    "title": "Beyond Words",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/BeyondWords/thumbnail/BeyondWords-S-01.jpg",
-    "size": "N/A",
+    "size": "18\" × 26\" (45.72 cm × 66.04 cm)",
     "price": "N/A",
     "category": "collectors",
-    "permalink": "/artworks/beyond-words-01/"
+    "permalink": "/artworks/beyond-words/"
   }
 ]

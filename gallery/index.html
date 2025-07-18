@@ -5,29 +5,6 @@ title: Gallery
 
 
 <!-- Tabs -->
-<!-- <div
-    x-data="{
-        selectedId: null,
-        artworks: []
-        init() {
-          artworks = {{ site.data.artworks | jsonify }};
-            this.$nextTick(() => this.select(this.$id('tab', 1)))
-        },
-        select(id) {
-            this.selectedId = id
-        },
-        isSelected(id) {
-            return this.selectedId === id
-        },
-        whichChild(el, parent) {
-            return Array.from(parent.children).indexOf(el) + 1
-        }
-    }"
-    x-id="['tab']"
-    class="w-full mx-auto mb-10"
-    x-cloak
-> -->
-
 <div
   x-data="tabGallery()"
   x-init="init()"
@@ -102,16 +79,24 @@ title: Gallery
             role="tabpanel"
             class="p-8"
         >
-            <h2 class="text-xl font-bold">All Artworks</h2>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 md:grid-cols-3">
                 <template x-for="art in artworks" :key="art.permalink">
-                    <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
-                        <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
-                            <p class="text-sm text-gray-600" x-text="art.size"></p>
-                            <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
-                        </div>
+                    <a
+                    :href="art.permalink"
+                    class="flex flex-col items-center overflow-hidden transition duration-150 ease-in-out hover:border hover:border-slate-300 hover:shadow"
+                    style="height: 80%"
+                    >
+                    <!-- Image -->
+                    <img
+                        :src="art.image"
+                        :alt="art.title"
+                        class="flex-1 object-cover w-auto rounded h-2/3"
+                    >
+
+                    <div class="w-full py-1 text-center">
+                        <h5 class="text-sm font-semibold text-gray-800" x-text="art.title"></h5>
+                        <p class="text-xs text-gray-600" x-text="art.size"></p>
+                    </div>
                     </a>
                 </template>
             </div>
@@ -123,17 +108,25 @@ title: Gallery
             role="tabpanel"
             class="p-8"
         >
-            <h2 class="text-xl font-bold">Original Artworks</h2>
-              <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 md:grid-cols-3">
                 <template x-for="art in artworks" :key="art.permalink">
                     <template x-if="art.category === 'original'">
-                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
-                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
-                                <p class="text-sm text-gray-600" x-text="art.size"></p>
-                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
-                            </div>
+                        <a
+                        :href="art.permalink"
+                        class="flex flex-col items-center overflow-hidden transition duration-150 ease-in-out hover:border hover:border-slate-300 hover:shadow"
+                        style="height: 80%"
+                        >
+                        <!-- Image -->
+                        <img
+                            :src="art.image"
+                            :alt="art.title"
+                            class="flex-1 object-cover w-auto rounded h-2/3"
+                        >
+                        
+                        <div class="w-full py-1 text-center">
+                            <h5 class="text-sm font-semibold text-gray-800" x-text="art.title"></h5>
+                            <p class="text-xs text-gray-600" x-text="art.size"></p>
+                        </div>
                         </a>
                     </template>
                 </template>
@@ -146,17 +139,25 @@ title: Gallery
             role="tabpanel"
             class="p-8"
         >
-            <h2 class="text-xl font-bold">Collectors Edition</h2>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 md:grid-cols-3">
                 <template x-for="art in artworks" :key="art.permalink">
                     <template x-if="art.category === 'collectors'">
-                        <a :href="art.permalink" class="block overflow-hidden border rounded shadow hover:shadow-lg">
-                            <img :src="art.image" :alt="art.title" class="object-cover w-full h-60">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800" x-text="art.title"></h3>
-                                <p class="text-sm text-gray-600" x-text="art.size"></p>
-                                <p class="text-sm font-medium text-gray-900" x-text="art.price"></p>
-                            </div>
+                        <a
+                        :href="art.permalink"
+                        class="flex flex-col items-center overflow-hidden transition duration-150 ease-in-out hover:border hover:border-slate-300 hover:shadow"
+                        style="height: 80%"
+                        >
+                        <!-- Image -->
+                        <img
+                            :src="art.image"
+                            :alt="art.title"
+                            class="flex-1 object-cover w-auto rounded h-2/3"
+                        >
+                        
+                        <div class="w-full py-1 text-center">
+                            <h5 class="text-sm font-semibold text-gray-800" x-text="art.title"></h5>
+                            <p class="text-xs text-gray-600" x-text="art.size"></p>
+                        </div>
                         </a>
                     </template>
                 </template>
