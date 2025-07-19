@@ -2,7 +2,11 @@ title: My Art Gallery
 description: A personal collection of artworks by Saba.
 baseurl: ""       
 url: "https://sabaartgallery.com"   
-theme: minima
+
+# Remove or comment out the next line ↓↓↓
+# theme: minima
+
 collections:
   artworks:
     output: true
+

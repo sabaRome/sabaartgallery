@@ -7,6 +7,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,27 +32,6 @@
 
     <!-- Footer -->
     {% include footer.html %}
-    
-    <script>
-        // Toggle mobile nav
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-            x.className += " responsive";
-            } else {
-            x.className = "topnav";
-            }
-        }
 
-        // Close panel on outside click
-        document.addEventListener('click', function(event) {
-            var nav = document.getElementById("myTopnav");
-            var isClickInside = nav.contains(event.target);
-
-            if (!isClickInside && nav.className.includes("responsive")) {
-            nav.className = "topnav"; // Remove 'responsive'
-            }
-        });
-    </script>
 </body>
 </html>
