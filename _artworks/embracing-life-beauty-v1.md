@@ -1,5 +1,5 @@
 ---
-title: Embracing Life's Beauty
+title: Embracing Life's Beauty V.1
 description: Inspired by Sepehri’s verse, this artwork celebrates the soul’s quiet bloom—where the word ‘flower’ radiates life, beauty, and infinite emotional depth.
 keywords:
   - persian calligraphy
@@ -14,9 +14,9 @@ keywords:
   - visual poetry
 image: https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/EmbracingLifesBeauty/thumbnail/embracing-life-beauty-S-01.jpg
 layout: artwork
-permalink: /artworks/embracing-life-beauty/
-slug: embracing-life-beauty
-Year: 2023
+permalink: /artworks/embracing-life-beauty-v1/
+slug: embracing-life-beauty-v1
+year: 2023
 size: 23" × 32" (58.42 cm × 81.28 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, handmade ink for traditional Persian calligraphy, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).

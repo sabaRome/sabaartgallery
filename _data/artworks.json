@@ -97,7 +97,7 @@
   },
   {
     "id": 7,
-    "title": "Embracing Life's Beauty",
+    "title": "Embracing Life's Beauty V.1",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/EmbracingLifesBeauty/thumbnail/embracing-life-beauty-S-01.jpg",
     "size": "23\" × 32\" (58.42 cm × 81.28 cm)",
     "price": "N/A",
@@ -109,10 +109,26 @@
     "illumination (Tazhib)": "",
     "passe-partouts": "",
     "frame": "",
-    "permalink": "/artworks/embracing-life-beauty/"
+    "permalink": "/artworks/embracing-life-beauty-v1/"
   },
   {
     "id": 8,
+    "title": "Embracing Life's Beauty V.2",
+    "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/EmbracingLifesBeauty/thumbnail/embracing-life-beauty-S-green-01.jpg",
+    "size": "19.68\" × 27.55\" (50 cm × 70 cm)",
+    "price": "N/A",
+    "category": "original",
+    "poem": "",
+    "poet": "",
+    "materials": "",
+    "technique": "",
+    "illumination (Tazhib)": "",
+    "passe-partouts": "",
+    "frame": "",
+    "permalink": "/artworks/embracing-life-beauty-v2/"
+  },
+  {
+    "id": 9,
     "title": "Beyond Words",
     "image": "https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/BeyondWords/thumbnail/BeyondWords-S-01.jpg",
     "size": "18\" × 26\" (45.72 cm × 66.04 cm)",
