@@ -21,7 +21,8 @@ year: 2023
 size: 14" × 19" (35.56 cm × 48.26 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, handmade ink for traditional Persian calligraphy, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq, Spontaneous and flowing gestures created with a handcrafted wooden paddle-shaped pen on richly textured handmade paper.
+technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+calligrapher: SaBa
 illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.

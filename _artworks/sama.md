@@ -18,16 +18,17 @@ layout: artwork
 permalink: /artworks/sama/
 slug: sama
 year: 2025
-size: 19" × 26" (48.26 cm × 66.04 cm)
+size: 18" × 26" (45.72 cm × 66.04 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, Schmincke acrylic ink, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq, Spontaneous and flowing gestures of the reed pen on paper
+technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+calligrapher: SaBa
 illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
 poet: Sohrab Sepehri (1928-1980)
-poem:  et us open the door to humanity, to light, to the plant, and to the insect.
+poem:  Let us open the door to humanity, to light, to the plant, and to the insect.
 ---
 
 <div class="space-y-5">

@@ -17,10 +17,11 @@ layout: artwork
 permalink: /artworks/woman-life-freedom/
 slug: woman-life-freedom
 year: 2025
-size: 18" × 26" (45.72 cm × 66.04 cm)
+size: 18" × 27" (45.72 cm × 68.58 cm)
 category: Original Artwork
 materials: Handmade Italian 100% cotton paper, Schmincke acrylic ink, reed pens crafted from the natural reeds of northern Iran.
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq, Spontaneous and flowing gestures of the reed pen on paper
+technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+calligrapher: SaBa
 illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
