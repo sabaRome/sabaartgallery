@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://sabaartgallery.com/</loc>
+  </url>
+
+  <!-- Static pages -->
+  <url><loc>https://sabaartgallery.com/about-Narvan/</loc></url>
+  <url><loc>https://sabaartgallery.com/about-persian-calligraphy/</loc></url>
+  <url><loc>https://sabaartgallery.com/about-persian-illumination/</loc></url>
+  <url><loc>https://sabaartgallery.com/about-Rozaline/</loc></url>
+  <url><loc>https://sabaartgallery.com/about-SaBa/</loc></url>
+  <url><loc>https://sabaartgallery.com/artistic-concept/</loc></url>
+  <url><loc>https://sabaartgallery.com/commission/</loc></url>
+  <url><loc>https://sabaartgallery.com/contact/</loc></url>
+  <url><loc>https://sabaartgallery.com/copyright/</loc></url>
+  <url><loc>https://sabaartgallery.com/method-and-materials/</loc></url>
+  <url><loc>https://sabaartgallery.com/thank-you/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/</loc></url>
+
+  <!-- Artworks (assuming pretty permalinks) -->
+  <url><loc>https://sabaartgallery.com/artworks/beyond-words/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/embracing-life-beauty/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/sama/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/still-wet/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/the-pearl-within/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/the-pure-flow/</loc></url>
+  <url><loc>https://sabaartgallery.com/artworks/woman-life-freedom/</loc></url>
+</urlset>

@@ -2,133 +2,27 @@
 layout: default
 title: Contact
 ---
+<div class="p-1 md:p-16">
+    <div>
+      <h2 class="text-center">
+        Start a Conversation
+      </h2>
+      <p class="mt-6 mb-8 font-light text-center text-stone-500 lg:mb-16 sm:text-lg">
+        I’d love to hear from you — whether it’s a thought, a question, or a spark of inspiration.<br>
+        Let your words become part of the creative journey.
+      </p>
+    </div>
+    
+    {% include contactForm.html %}
 
-<section class="bg-neutral-50">
-  <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16">
-    <h2 class="text-4xl font-extrabold tracking-tight text-center text-stone-900">
-      Connect with the Artist
-    </h2>
-    <p class="mt-6 mb-8 font-light text-center text-stone-500 lg:mb-16 sm:text-lg">
-      I’d love to hear from you — whether it’s a thought, a question, or a whisper of inspiration.<br>
-      Let your message find its way to my canvas.
-    </p>
+    <div>
+      <p class="my-4 text-sm text-center text-stone-500">
+        Prefer email?<br>
+        You can reach the artist directly at:<br>
+        <a href="mailto:saba@sabaartgallery.com" class="font-medium underline text-stone-600 hover:text-stone-900">
+          saba@sabaartgallery.com
+        </a>
+      </p>
+    </div>
 
-    <form 
-        action="https://formsubmit.co/e16794b48aff53b2c858b290942bf29e" 
-        method="POST" 
-        class="space-y-8"
-        id="contactForm" 
-    >
-
-      <div>
-        <label for="name" class="block mb-2 text-sm font-medium text-stone-900">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          class="bg-stone-50 border border-stone-300 text-stone-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-          placeholder="Your name..."
-          required
-        >
-        <p id="nameError" class="hidden mt-1 text-sm text-red-500">Please enter your name.</p>
-      </div>
-
-      <div>
-        <label for="email" class="block mb-2 text-sm font-medium text-stone-900">Your Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="bg-stone-50 border border-stone-300 text-stone-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-          placeholder="name@example.com"
-          required
-        >
-        <p id="emailError" class="hidden mt-1 text-sm text-red-500">Please enter a valid email address.</p>
-      </div>
-
-      <div>
-        <label for="subject" class="block mb-2 text-sm font-medium text-stone-900">Subject</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          class="block w-full p-3 text-sm border rounded text-stone-900 border-stone-300 bg-stone-50 focus:ring-primary-500 focus:border-primary-500"
-          placeholder="Let us know how we can help you"
-          required
-        >
-        <p id="subjectError" class="hidden mt-1 text-sm text-red-500">Please enter a subject.</p>
-      </div>
-
-      <div class="sm:col-span-2">
-        <label for="message" class="block mb-2 text-sm font-medium text-stone-900">Your Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          class="block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded border border-stone-300 focus:ring-primary-500 focus:border-primary-500"
-          placeholder="Leave a comment..."
-          required
-        ></textarea>
-        <p id="messageError" class="hidden mt-1 text-sm text-red-500">Please enter a message.</p>
-      </div>
-
-      <!-- Formsubmit hidden fields -->
-      <input type="hidden" name="_subject" value="New contact from SabaArtGallery">
-      <input type="hidden" name="_next" value="https://sabaartgallery.com/thank-you/">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_template" value="table">
-
-
-      <button
-        type="submit"
-        class="float-right px-5 py-3 text-sm font-medium text-center rounded cursor-pointer text-stone-100 bg-stone-800 sm:w-fit hover:bg-stone-100 hover:text-stone-800 hover:border hover:border-stone-300 focus:ring-4 focus:outline-none focus:ring-primary-300"
-      >
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
-
-<p class="my-4 text-sm text-center text-stone-500">
-  Prefer email?<br>
-  You can reach the artist directly at:<br>
-  <a href="mailto:saba@sabaartgallery.com" class="font-medium underline text-stone-600 hover:text-stone-900">
-    saba@sabaartgallery.com
-  </a>
-</p>
-
-
-<!-- JavaScript for validation -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contactForm");
-
-    form.addEventListener("submit", function (e) {
-      let isValid = true;
-
-      const fields = [
-        { id: "name", errorId: "nameError" },
-        { id: "email", errorId: "emailError" },
-        { id: "subject", errorId: "subjectError" },
-        { id: "message", errorId: "messageError" },
-      ];
-
-      fields.forEach(({ id, errorId }) => {
-        const input = document.getElementById(id);
-        const error = document.getElementById(errorId);
-
-        if (!input.value.trim() || (input.type === "email" && !input.validity.valid)) {
-          error.classList.remove("hidden");
-          isValid = false;
-        } else {
-          error.classList.add("hidden");
-        }
-      });
-
-      if (!isValid) {
-        e.preventDefault(); // stop form if there are errors
-      }
-    });
-  });
-</script>
+</div>

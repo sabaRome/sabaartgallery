@@ -23,20 +23,12 @@ html {
     background-color: #a8a29e; /* Light stone track for light mode */
 }
 
-
-/* Basic Layout */
-.body-layout {
-  background-color: oklch(98.4% 0.003 247.858);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
+.h-120{
+height: 30rem;
 }
-
-
+.h-140{
+height: 35rem;
+}
 /* Logo */
 .logo-link {
   position: relative;
@@ -80,9 +72,6 @@ html {
   font-style: normal;
 }
 
-.text-center {
-    text-align: center !important;
-}
 
 .bio-byline {
   font-style: italic;
@@ -93,45 +82,70 @@ html {
 
 
 /* Headings */
-
 h1 {
-    font-size: 3rem !important; /* 2rem = 2 × 16px = 32px */
-    font-weight: 700 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 2.25rem; /* base: 36px */
+  font-weight: 700;
 }
 
 h2 {
-    font-size: 1.75rem !important;  /* 1.75rem = 28px,  text-3xl = 1.875rem (30px) */
-    font-weight: 600 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 1.875rem; /* base: 30px */
+  font-weight: 600;
 }
 
 h3 {
-    font-size: 1.5rem !important; /* text-2xl = 1.5rem (24px) */
-    font-weight: 600 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 1.5rem; /* base: 24px */
+  font-weight: 600;
 }
 
 h4 {
-    font-size: 1.25rem !important;  /* text-xl */
-    font-weight: 600 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 1.25rem; /* base: 20px */
+  font-weight: 600;
 }
 
 h5 {
-    font-size: 1rem !important;  /* text-base */
-    font-weight: 600 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 1rem; /* base: 16px */
+  font-weight: 600;
 }
 
 h6 {
-    font-size: 0.875rem !important;  /* text-xs */
-    font-weight: 600 !important;
-    margin: inherit !important;
-    text-align: inherit !important;
+  font-size: 0.875rem; /* base: 14px */
+  font-weight: 600;
+}
+
+/* Small screens and up (≥640px) */
+@media (min-width: 640px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2.125rem; }
+  h3 { font-size: 1.75rem; }
+}
+
+/* Medium screens and up (≥768px) */
+@media (min-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 1.875rem; }
+}
+
+/* Large screens and up (≥1024px) */
+@media (min-width: 1024px) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.5rem; }
+}
+
+/* Extra large screens (≥1280px) */
+@media (min-width: 1280px) {
+  h1 { font-size: 4rem; }
+}
+
+
+.showTex {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+hr {
+  height: 1px;
+  background-color: #d5d5d5;
+  border: none;
+  margin: 0.5rem 0;
 }

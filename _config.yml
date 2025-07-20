@@ -1,12 +1,14 @@
-title: My Art Gallery
-description: A personal collection of artworks by Saba.
+title: SaBa Art Gallery
+description: A showcase of unique fine art pieces by SaBa, reflecting personal expression and artistic vision.
 baseurl: ""       
 url: "https://sabaartgallery.com"   
 
-# Remove or comment out the next line ↓↓↓
 # theme: minima
 
 collections:
   artworks:
     output: true
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
