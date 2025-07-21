@@ -1,5 +1,5 @@
 ---
-title: Embracing Life's Beauty V.2
+title: Embracing Life's Beauty -II
 description: Inspired by Sepehri’s verse, this artwork celebrates the soul’s quiet bloom—where the word ‘flower’ radiates life, beauty, and infinite emotional depth.
 keywords:
   - persian calligraphy
