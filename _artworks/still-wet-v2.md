@@ -1,5 +1,5 @@
 ---
-title: Still Wet V2
+title: Still Wet — II
 description: A meditative artwork inspired by Sohrab Sepehri, inviting presence, softness, and inner stillness through minimal Persian design and poetic depth.
 keywords:
   - persian calligraphy
