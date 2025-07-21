@@ -28,8 +28,10 @@ illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
+shipping: Free
 poet: Muhammad Iqbal (1877 – 1938) 
 poem:  Life is to forge a pearl within one’s shell
+published: July 20, 2025
 ---
 <div class="space-y-5">
     <p class="showTex">Life is a process of inner transformation. Within the shell, the birth of a pearl begins not in peace, but in discomfort with the intrusion of something unwanted, foreign, and abrasive. Yet, this very disturbance becomes the catalyst for a quiet and patient transformation. Layer by layer, the shell embraces the irritant, softens it, and over time, creates its most precious treasure.</p>

@@ -26,13 +26,11 @@ illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
+shipping: Free
 poet: From countless hearts
 poem:  Woman Life Freedom
-
-
-
+published: July 20, 2025
 ---
-
 
 <div class="space-y-5">
     <p class="showTex">As a woman artist whose work centers on the theme of life, I feel a profound responsibility to honor the “Woman, Life, Freedom” movement, a powerful uprising that began in Iran and continues to echo across the world.</p>

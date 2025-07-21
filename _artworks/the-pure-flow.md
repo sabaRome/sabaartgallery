@@ -27,8 +27,10 @@ illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
+shipping: Free
 poet: Sohrab Sepehri (1928-1980)
 poem: Let us not muddy the water.
+published: July 20, 2025
 ---
 
 

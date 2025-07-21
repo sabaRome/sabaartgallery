@@ -27,9 +27,10 @@ illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
+shipping: Free
 poet: Rumi (1207-1273)
 poem:  Empathy is better than speaking the same language. (To be one in heart is better than to be one in tongue.)
-
+published: July 20, 2025
 
 ---
 

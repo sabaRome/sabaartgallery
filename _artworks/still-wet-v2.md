@@ -1,5 +1,5 @@
 ---
-title: Still Wet
+title: Still Wet V2
 description: A meditative artwork inspired by Sohrab Sepehri, inviting presence, softness, and inner stillness through minimal Persian design and poetic depth.
 keywords:
   - persian calligraphy
@@ -15,8 +15,8 @@ keywords:
 
 image: https://storage.googleapis.com/artworks_img_public_bucket/sabaArtGallery/sillWet/thumbnail/stilWet-S-01.jpg
 layout: artwork
-permalink: /artworks/still-wet/
-slug: still-wet
+permalink: /artworks/still-wet-v2/
+slug: still-wet-v2
 year: 2025
 size: 18" × 27" (68.50 cm × 46.50 cm)
 category: Original Artwork
@@ -27,8 +27,10 @@ illumination: Narvan
 frame: Not included 
 passe-partouts: Handcrafted, using the traditional starch-pressing technique for lasting quality and authenticity.
 price: Available on inquiry
+shipping: Free
 poet: Sohrab Sepehri (1928-1980)
 poem:  Life is getting wet over and over.
+published: July 21, 2025
 ---
 
 

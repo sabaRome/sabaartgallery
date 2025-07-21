@@ -9,7 +9,8 @@
         <!--Descktop Menu -->
         <div class="hidden space-x-2 md:flex md:space-x-5 text-slate-400">
             <a href="/" class="transition duration-150 ease-in-out text-slate-400 hover:font-bold hover:text-stone-800 hover:scale-110 {% if page.url == '/' %}bg-slate-50 font-bold text-stone-800{% endif %}">Home</a>
-            <a href="/artworks/" class="transition duration-150 ease-in-out text-slate-400 hover:font-bold hover:text-stone-800 hover:scale-110 {% if page.url == '/artworks/' %} font-bold text-stone-800{% endif %}">Gallery</a>
+             <a href="/artworks/" class="transition duration-150 ease-in-out text-slate-400 hover:font-bold hover:text-stone-800 hover:scale-110 {% if page.url contains '/artworks/' %} font-bold text-stone-800{% endif %}">Artworks</a>
+
             <a href="/contact/" class="transition duration-150 ease-in-out text-slate-400 hover:font-bold hover:text-stone-800 hover:scale-110 {% if page.url == '/contact/' %} font-bold text-stone-800{% endif %}">Contact</a>
             <a href="/commission/" class="transition duration-150 ease-in-out text-slate-400 hover:font-bold hover:text-stone-800 hover:scale-110 {% if page.url == '/commission/' %} font-bold text-stone-800{% endif %}">Commission</a>
 
@@ -78,9 +79,9 @@
                 </a>
                 <a
                     href="/artworks/"
-                    class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors focus:outline-none text-left text-slate-400 {% if page.url == '/artworks/' %} font-bold text-stone-800{% endif %}"
+                    class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors focus:outline-none text-left text-slate-400 {% if page.url contains '/artworks/' %} font-bold text-stone-800{% endif %}"
                 >
-                    Gallery
+                    Artworks
                 </a>
                 <a
                     href="/contact/"
