@@ -50,7 +50,7 @@ title: Home
         <p class="text-sm md:text-base lg:text-lg">A paradox? Perhaps.</p>
 
         <div class="">
-            <p class="text-sm md:text-base lg:text-lg">But like a choreographer who creates rhythm and harmony through the arrangement of movements, or like an abstract painter who expresses their thought through geometric forms, regular or irregular, I create harmony, order, and motion using the letters and words of Nastaʿlīq.</p>
+            <p class="text-sm md:text-base lg:text-lg">But like a choreographer who creates rhythm and harmony through the arrangement of movements, or like an abstract painter who conveys intellectual and emotional depth through geometric forms, regular or irregular, I create harmony, order, and motion using the letters and words of Nastaʿlīq.</p>
             <p class="text-sm md:text-base lg:text-lg">Therefore, my audience spans a broad spectrum, from those who know only the Persian language to those who do not, but who understand the language of visual form.</p>
             <p class="text-sm md:text-base lg:text-lg"></p>
         </div>
