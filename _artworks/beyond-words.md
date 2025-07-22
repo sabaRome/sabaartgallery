@@ -21,7 +21,7 @@ year: 2023
 size: 18" × 26" (45.72 cm × 66.04 cm)
 category: Original Artwork
 materials: Handmade Italian 100% cotton paper, Rohrers Antiktusche ink, reed pens crafted from the natural reeds of northern Iran.
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+technique: Persian calligraphy- Siyah-Mashq, Nastaʿlīq
 calligrapher: SaBa
 illumination: Narvan
 frame: Not included 

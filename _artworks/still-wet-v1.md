@@ -21,7 +21,7 @@ year: 2025
 size: 18" × 27" (68.50 cm × 46.50 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, Schmincke acrylic ink, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+technique: Persian calligraphy- Siyah-Mashq, Nastaʿlīq
 calligrapher: SaBa
 illumination: Narvan
 frame: Not included 

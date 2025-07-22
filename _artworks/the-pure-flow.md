@@ -21,7 +21,7 @@ year: 2023
 size: 14" × 19" (35.56 cm × 48.26 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, handmade ink for traditional Persian calligraphy, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+technique: Persian calligraphy- Siyah-Mashq, Nastaʿlīq
 calligrapher: SaBa
 illumination: Narvan
 frame: Not included 
@@ -52,7 +52,7 @@ published: July 20, 2025
     </p>
     
     <p class="showTex">
-        In this piece, the flowing abstraction of the Nastaliq script echoes the poem’s quiet plea, for clarity, stillness, and respect for what remains untouched, like the graceful drift of a calm, untroubled stream.<br>
+        In this piece, the flowing abstraction of the Nastaʿlīq script echoes the poem’s quiet plea, for clarity, stillness, and respect for what remains untouched, like the graceful drift of a calm, untroubled stream.<br>
         The composition is intentionally shaped so that the empty space, the silence between the lines speaks with as much meaning as the words themselves.<br>
         The flowing gestures, elongated strokes, and soft spacing evoke the essence of water, calm, intentional, and serene, never meant to be disturbed.<br>
     </p>

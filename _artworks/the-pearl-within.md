@@ -22,7 +22,7 @@ year: 2025
 size: 19" × 26" (48.26 cm × 66.04 cm)
 category: Original Artwork
 materials: Handmade Indian 100% cotton paper, Handmade ink for traditional Persian calligraphy, reed pens crafted from the natural reeds of northern Iran.
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+technique: Persian calligraphy- Siyah-Mashq, Nastaʿlīq
 calligrapher: SaBa
 illumination: Narvan
 frame: Not included 

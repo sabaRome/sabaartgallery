@@ -1,5 +1,5 @@
 ---
-title: Embracing Life's Beauty -II
+title: Embracing Life's Beauty - II
 description: Inspired by Sepehri’s verse, this artwork celebrates the soul’s quiet bloom—where the word ‘flower’ radiates life, beauty, and infinite emotional depth.
 keywords:
   - persian calligraphy
@@ -20,7 +20,7 @@ year: 2023
 size: 19.68" × 27.55" (50 cm × 70 cm)
 category: Original Artwork
 materials: Handmade 100% Indian cotton paper, handmade ink for traditional Persian calligraphy, and a handcrafted wooden paddle-shaped pen (chosen over a reed pen due to its broader width).
-technique: Persian calligraphy- Siyah-Mashq, Nastaliq
+technique: Persian calligraphy- Siyah-Mashq, Nastaʿlīq
 calligrapher: SaBa
 illumination: Narvan
 frame: Not included 
