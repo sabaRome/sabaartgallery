@@ -11,15 +11,15 @@
         type: 'loop',
         arrows: true,
         autoplay: true,
-        interval: 5000,
+        interval: 8000,
         speed: 500,
         pauseOnHover: true,
         rewind: true,
         gap: '0.5rem',
         breakpoints: {
           640: { perPage: 1 },
-          768: { perPage: 2 },
-          1024: { perPage: 3 },
+          768: { perPage: 1 },
+          1024: { perPage: 1 },
         },
       }).mount();
     },
@@ -49,6 +49,11 @@
     background: rgb(192, 192, 192);
     opacity: 1;
   }
+.splide__pagination
+ {
+    bottom: -1em;
+    margin: auto;
+ }
 
   .splide__pagination__page.is-active {
     background: #333;
