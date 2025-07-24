@@ -6,7 +6,7 @@ title: Home
 <h1 class="mb-24 text-center racing-sans-one-regular">Welcome to SaBa's Art Gallery</h1>
 
 <article>
-  <div class="float-right w-full mx-auto mb-8 lg:w-1/2 lg:mt-0">
+    <div class="float-right w-full mx-auto mb-20 md:mb-10 md:lg:w-1/2 lg:mt-0">
 
         {% capture slider_content %}
             {% for item in site.data.sliderImages %}
@@ -19,22 +19,20 @@ title: Home
                         >
                         <span class="w-full text-xs text-center text-stone-400">{{ item.title | escape }}</span>
                     </a>
-                    
                 </li>
-
             {% endfor %}
         {% endcapture %}
 
         {% include slider-component.html content=slider_content %}
 
-  </div>
-  <div class="space-y-3 clear-left">
+    </div>
+    <div class="space-y-3 clear-left">
 
         <div>
             <h3 class="hidden lg:block">Opening Words:</h3>
             <h4 class="block lg:hidden">Opening Words:</h4>
 
-            <p class="text-sm md:text-base lg:text-lg">My works are abstract paintings that manifest through the form of Siyah-Mashq in Persian Nastaʿlīq script.</p>
+            <p class="text-sm md:text-base lg:text-lg">My works are abstract art that manifest through the form of Siyah-Mashq in Persian Nastaʿlīq script.</p>
             <p class="text-sm md:text-base lg:text-lg">Not writings meant to be read by Persian speakers, but compositions intended to evoke reflection.</p>
             <p class="text-sm md:text-base lg:text-lg">They are forms to be seen, not texts to be read, though they are made of Persian letters and words.</p>
         </div>
